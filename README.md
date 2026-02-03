@@ -1,112 +1,112 @@
-# 📱 App de Agendamentos — React Native (Estudo)
+# 📱 Appointments App — React Native (Study Project)
 
-App simples para reaprender React Native.  
-O usuário digita um nome e adiciona em uma lista de agendamentos.
+Simple app to relearn React Native.  
+The user types a name and adds it to an appointments list.
 
 ---
 
-## 🚀 Objetivo do Projeto
+## 🚀 Project Goal
 
-Praticar conceitos básicos de React Native:
+Practice basic React Native concepts:
 
 - useState
 - TextInput
-- Botões e eventos
-- Renderização de listas
-- Manipulação de estado com arrays
-- Persistência local (AsyncStorage)
+- Buttons and events
+- List rendering
+- State manipulation with arrays
+- Local persistence (AsyncStorage)
 
 ---
 
-## API GraphQL
+## GraphQL API
 
-A API GraphQL deste projeto está disponível em um repositório separado:
+The GraphQL API for this project is available in a separate repository:
 
 **🔗 [graphql-appointments](https://github.com/ramonramoscardoso/graphql-appointments)**
 
-### Configuração
+### Setup
 
-1. Clone o repositório da API:
+1. Clone the API repository:
 
 ```bash
 git clone https://github.com/ramonramoscardoso/graphql-appointments.git
 cd graphql-appointments
 ```
 
-2. Instale as dependências e siga as instruções do README do repositório da API para configurar o ambiente
+2. Install dependencies and follow the instructions in the API repository's README to set up the environment
 
-3. Inicie o servidor GraphQL localmente
+3. Start the GraphQL server locally
 
-4. Configure a URL da API no seu app React Native:
-   - Crie um arquivo `.env` na raiz do projeto
-   - Adicione a variável de ambiente apontando para a API:
+4. Configure the API URL in your React Native app:
+   - Create a `.env` file in the project root
+   - Add the environment variable pointing to the API:
 
 ```
    EXPO_PUBLIC_API_URL=http://localhost:4000/graphql
 ```
 
-(Ajuste a porta conforme sua configuração)
+(Adjust the port according to your setup)
 
-### Documentação
+### Documentation
 
-Consulte o repositório da API para mais informações sobre:
+Check the API repository for more information about:
 
-- Schema GraphQL disponível
-- Queries e Mutations suportadas
-- Autenticação e autorização
-- Exemplos de uso
-
----
-
-## 🧱 FASE 1 — Estrutura Básica
-
-**Meta:** Conseguir digitar um nome e capturar o valor.
-
-- [x] Criar projeto (preferência: Expo)
-- [x] Limpar tela inicial
-- [x] Criar estado `nome`
-- [x] Criar `TextInput` para o nome
-- [x] Criar botão **Adicionar**
-- [x] No clique do botão → `console.log(nome)`
+- Available GraphQL schema
+- Supported Queries and Mutations
+- Authentication and authorization
+- Usage examples
 
 ---
 
-## 📋 FASE 2 — Lista de Agendamentos
+## 🧱 PHASE 1 — Basic Structure
 
-**Meta:** Mostrar os nomes adicionados na tela.
+**Goal:** Be able to type a name and capture the value.
 
-- [x] Criar estado `agendamentos` (array)
-- [x] Ao clicar em **Adicionar**:
-  - [x] Validar se o nome não está vazio
-  - [x] Adicionar nome na lista
-  - [x] Limpar o input
-- [x] Exibir lista usando **FlatList**
-
----
-
-## ❌ FASE 3 — Remover Agendamento
-
-**Meta:** Permitir excluir itens da lista.
-
-- [ ] Criar função `removerAgendamento(index)`
-- [ ] Adicionar botão **Remover** em cada item
-- [ ] Atualizar o estado removendo o item clicado
+- [x] Create project (preference: Expo)
+- [x] Clear initial screen
+- [x] Create `name` state
+- [x] Create `TextInput` for the name
+- [x] Create **Add** button
+- [x] On button click → `console.log(name)`
 
 ---
 
-## ✏️ FASE 4 — Melhorias de UX
+## 📋 PHASE 2 — Appointments List
 
-- [ ] Não permitir adicionar nome vazio
-- [ ] Mostrar alerta se estiver vazio
-- [ ] Fechar teclado ao adicionar
-- [ ] Desabilitar botão se input estiver vazio
+**Goal:** Display added names on screen.
+
+- [x] Create `appointments` state (array)
+- [x] When clicking **Add**:
+  - [x] Validate that name is not empty
+  - [x] Add name to the list
+  - [x] Clear the input
+- [x] Display list using **FlatList**
 
 ---
 
-## 🎨 FASE 5 — Estilização
+## ❌ PHASE 3 — Remove Appointment
 
-- [x] Criar `StyleSheet`
-- [x] Espaçamento entre elementos
-- [x] Estilizar itens da lista como cartões
-- [x] Botão com cor personalizada
-- [x] Fonte maior para os nomes
+**Goal:** Allow deleting items from the list.
+
+- [ ] Create `removeAppointment(index)` function
+- [ ] Add **Remove** button to each item
+- [ ] Update state by removing the clicked item
+
+---
+
+## ✏️ PHASE 4 — UX Improvements
+
+- [ ] Don't allow adding empty name
+- [ ] Show alert if empty
+- [ ] Close keyboard when adding
+- [ ] Disable button if input is empty
+
+---
+
+## 🎨 PHASE 5 — Styling
+
+- [x] Create `StyleSheet`
+- [x] Spacing between elements
+- [x] Style list items as cards
+- [x] Button with custom color
+- [x] Larger font for names
