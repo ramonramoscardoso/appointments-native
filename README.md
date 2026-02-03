@@ -1,50 +1,112 @@
-# Welcome to your Expo app 👋
+# 📱 App de Agendamentos — React Native (Estudo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+App simples para reaprender React Native.  
+O usuário digita um nome e adiciona em uma lista de agendamentos.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Objetivo do Projeto
 
-   ```bash
-   npm install
-   ```
+Praticar conceitos básicos de React Native:
 
-2. Start the app
+- useState
+- TextInput
+- Botões e eventos
+- Renderização de listas
+- Manipulação de estado com arrays
+- Persistência local (AsyncStorage)
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## API GraphQL
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+A API GraphQL deste projeto está disponível em um repositório separado:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+**🔗 [graphql-appointments](https://github.com/ramonramoscardoso/graphql-appointments)**
 
-## Get a fresh project
+### Configuração
 
-When you're ready, run:
+1. Clone o repositório da API:
 
 ```bash
-npm run reset-project
+git clone https://github.com/ramonramoscardoso/graphql-appointments.git
+cd graphql-appointments
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Instale as dependências e siga as instruções do README do repositório da API para configurar o ambiente
 
-## Learn more
+3. Inicie o servidor GraphQL localmente
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Configure a URL da API no seu app React Native:
+   - Crie um arquivo `.env` na raiz do projeto
+   - Adicione a variável de ambiente apontando para a API:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+   API_URL=http://localhost:4000/graphql
+```
 
-## Join the community
+(Ajuste a porta conforme sua configuração)
 
-Join our community of developers creating universal apps.
+### Documentação
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Consulte o repositório da API para mais informações sobre:
+
+- Schema GraphQL disponível
+- Queries e Mutations suportadas
+- Autenticação e autorização
+- Exemplos de uso
+
+---
+
+## 🧱 FASE 1 — Estrutura Básica
+
+**Meta:** Conseguir digitar um nome e capturar o valor.
+
+- [x] Criar projeto (preferência: Expo)
+- [x] Limpar tela inicial
+- [x] Criar estado `nome`
+- [x] Criar `TextInput` para o nome
+- [x] Criar botão **Adicionar**
+- [x] No clique do botão → `console.log(nome)`
+
+---
+
+## 📋 FASE 2 — Lista de Agendamentos
+
+**Meta:** Mostrar os nomes adicionados na tela.
+
+- [x] Criar estado `agendamentos` (array)
+- [x] Ao clicar em **Adicionar**:
+  - [x] Validar se o nome não está vazio
+  - [x] Adicionar nome na lista
+  - [x] Limpar o input
+- [x] Exibir lista usando **FlatList**
+
+---
+
+## ❌ FASE 3 — Remover Agendamento
+
+**Meta:** Permitir excluir itens da lista.
+
+- [ ] Criar função `removerAgendamento(index)`
+- [ ] Adicionar botão **Remover** em cada item
+- [ ] Atualizar o estado removendo o item clicado
+
+---
+
+## ✏️ FASE 4 — Melhorias de UX
+
+- [ ] Não permitir adicionar nome vazio
+- [ ] Mostrar alerta se estiver vazio
+- [ ] Fechar teclado ao adicionar
+- [ ] Desabilitar botão se input estiver vazio
+
+---
+
+## 🎨 FASE 5 — Estilização
+
+- [x] Criar `StyleSheet`
+- [x] Espaçamento entre elementos
+- [x] Estilizar itens da lista como cartões
+- [x] Botão com cor personalizada
+- [x] Fonte maior para os nomes
