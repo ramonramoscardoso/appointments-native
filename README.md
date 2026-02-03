@@ -42,7 +42,7 @@ cd graphql-appointments
    - Adicione a variável de ambiente apontando para a API:
 
 ```
-   API_URL=http://localhost:4000/graphql
+   EXPO_PUBLIC_API_URL=http://localhost:4000/graphql
 ```
 
 (Ajuste a porta conforme sua configuração)
